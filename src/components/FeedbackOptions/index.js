@@ -1,1 +1,2 @@
-export { default } from './FeedbackOptions';
+export * from './FeedbackOptions';
+export * from './Statistics';

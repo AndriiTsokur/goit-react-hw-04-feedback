@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Statistics from './Statistics';
 import capitalizeOptName from 'utils/capitalizeOptName';
+import handleMouseOut from 'utils/handleMouseOut';
 import css from './FeedbackOptions.module.css';
 
-export default function FeedbackOptions({ options, onLeaveFeedback }) {
+export function FeedbackOptions({ options, onLeaveFeedback }) {
 	const optionsNames = [...Object.keys(options)];
 
 	return (
-		<section>
+		<>
 			<h1 className={css.feedback__title}>Please leave feedback</h1>
 			<ul className={css.feedback__buttonsList}>
 				{optionsNames.map(optionName => {
@@ -18,6 +18,7 @@ export default function FeedbackOptions({ options, onLeaveFeedback }) {
 								className={css.item__button}
 								type="button"
 								onClick={onLeaveFeedback}
+								onMouseOut={handleMouseOut}
 							>
 								{capitalizeOptName(optionName)}
 							</button>
@@ -25,9 +26,7 @@ export default function FeedbackOptions({ options, onLeaveFeedback }) {
 					);
 				})}
 			</ul>
-
-			<Statistics votes={options} />
-		</section>
+		</>
 	);
 }
 

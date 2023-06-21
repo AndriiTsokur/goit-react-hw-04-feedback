@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import FeedbackOptions from 'components/FeedbackOptions';
+import { FeedbackOptions } from 'components/FeedbackOptions';
+import { Statistics } from 'components/FeedbackOptions/Statistics';
 import css from './App.module.css';
 
 export default class App extends Component {
@@ -17,10 +18,13 @@ export default class App extends Component {
 	render() {
 		return (
 			<div className={css.feedback__container}>
-				<FeedbackOptions
-					options={this.state}
-					onLeaveFeedback={this.handleButtons}
-				/>
+				<section>
+					<FeedbackOptions
+						options={this.state}
+						onLeaveFeedback={this.handleButtons}
+					/>
+					<Statistics votes={this.state} />
+				</section>
 			</div>
 		);
 	}
