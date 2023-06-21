@@ -1,0 +1,33 @@
+.feedback__title {
+	font-size: 32px;
+	margin-bottom: 15px;
+}
+
+.feedback__buttonsList {
+	display: flex;
+	gap: 10px;
+
+	margin-top: 0;
+	margin-bottom: 50px;
+	padding-left: 0;
+
+	list-style-type: none;
+}
+
+.item__button {
+	width: 100px;
+	height: 30px;
+
+	font-size: 16px;
+	line-height: 1;
+
+	border-radius: 10px;
+
+	transition: color 250ms, background-color 250ms;
+}
+
+.item__button:hover,
+.item__button:focus {
+	color: #ffffff;
+	background-color: #808080;
+}
