@@ -1,5 +1,5 @@
-# goit-react-hw-02_1
+# goit-react-hw-04_1
 
-GoIT Academy: React Section - Home Work No. 2-1 by Andrii Tsokur
+GoIT Academy: React Section - Home Work No. 4-1 by Andrii Tsokur
 
-"Події та стан. Форми"
+"Хуки"
